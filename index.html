@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a43" />
+  <title>SafarSaathi — Your journey, understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="SafarSaathi home">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10a3 3 0 0 1 3 3v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-8a3 3 0 0 1 3-3Z"/><path d="M8 7h8M8 11h.01M16 11h.01M8 18.5l-2 2m10-2 2 2M7 15h10"/></svg></span>
+        <span><strong>SafarSaathi</strong><small>TRAVEL, MADE SIMPLE</small></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">⌂</span> Overview</button>
+        <button class="nav-item" data-view="ticket"><span class="nav-icon">▤</span> Ticket scanner <span class="nav-tag">NEW</span></button>
+        <button class="nav-item" data-view="voice"><span class="nav-icon">◖</span> Voice assistant</button>
+        <button class="nav-item" data-view="notices"><span class="nav-icon">▧</span> Notice translator</button>
+      </nav>
+
+      <div class="sidebar-label second-label">YOUR JOURNEYS</div>
+      <div class="journey-mini">
+        <span class="mini-train">↗</span>
+        <div><strong>Kolkata → Delhi</strong><small>Demo journey · Oct 20</small></div>
+        <span class="online-dot"></span>
+      </div>
+      <button class="add-journey" id="addJourneyBtn">＋ Add a journey</button>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon">✦</span>
+          <strong>Travel with confidence</strong>
+          <p>Understand the details. Enjoy the journey.</p>
+          <button id="tipsBtn">See travel tips <span>→</span></button>
+        </div>
+        <div class="profile-row">
+          <div class="avatar">SS</div>
+          <div><strong>Guest traveller</strong><small>Demo workspace</small></div>
+          <button class="dots" aria-label="More profile options">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumbTitle">Overview</strong></div>
+        <div class="top-actions">
+          <div class="language-control">
+            <span class="globe">◎</span>
+            <select id="languageSelect" aria-label="Choose language">
+              <option value="en">English</option>
+              <option value="bn">বাংলা</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </div>
+          <button class="icon-button" id="notificationBtn" aria-label="Notifications">♧<i></i></button>
+          <div class="top-avatar">S</div>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR PERSONAL TRAVEL COMPANION</div>
+            <h1 id="welcomeTitle">Every journey starts<br class="desktop-break"> with <span>clarity.</span></h1>
+            <p class="welcome-copy" id="welcomeCopy">Tickets, notices, and travel questions — made easy in your language.</p>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="sun"></div><div class="art-cloud cloud-one"></div><div class="art-cloud cloud-two"></div>
+            <div class="art-hill hill-back"></div><div class="art-hill hill-front"></div>
+            <div class="art-track"></div><div class="art-train"><div class="train-window"></div><div class="train-window second"></div><div class="train-wheel"></div><div class="train-wheel wheel-two"></div></div>
+            <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span>
+          </div>
+        </section>
+
+        <section class="quick-actions">
+          <button class="quick-card" data-view="ticket">
+            <span class="quick-icon violet">▤</span><span class="quick-text"><strong>Scan a ticket</strong><small>Find your coach, berth & more</small></span><span class="quick-arrow">↗</span>
+          </button>
+          <button class="quick-card" data-view="voice">
+            <span class="quick-icon mint">◖</span><span class="quick-text"><strong>Ask by voice</strong><small>Talk naturally, in your language</small></span><span class="quick-arrow">↗</span>
+          </button>
+          <button class="quick-card" data-view="notices">
+            <span class="quick-icon peach">▧</span><span class="quick-text"><strong>Explain a notice</strong><small>Turn complex text into clear steps</small></span><span class="quick-arrow">↗</span>
+          </button>
+        </section>
+
+        <div class="section-heading">
+          <div><h2 id="journeyHeading">Your journey at a glance</h2><p>Here's your demo ticket, organised for you.</p></div>
+          <button class="text-button" id="editJourneyBtn">Edit details <span>↗</span></button>
+        </div>
+
+        <section class="journey-card">
+          <div class="journey-card-top">
+            <div class="train-name"><span class="train-icon">↗</span><div><strong id="trainName">Demo Express</strong><small>Sample journey · Not a real booking</small></div></div>
+            <span class="demo-badge"><span></span> DEMO DATA</span>
+          </div>
+          <div class="route-line">
+            <div class="station">
+              <span class="station-time" id="departureTime">06:35 <small>AM</small></span>
+              <strong id="fromCode">HWH</strong><span id="fromName">Howrah Junction</span>
+            </div>
+            <div class="route-middle"><span class="route-duration">~ 17h 20m</span><div class="route-rail"><i class="rail-dot"></i><span class="rail-train">🚆</span><i class="rail-dot"></i></div><span class="route-date" id="journeyDate">20 Oct 2026</span></div>
+            <div class="station station-end">
+              <span class="station-time" id="arrivalTime">11:55 <small>PM</small></span>
+              <strong id="toCode">NDLS</strong><span id="toName">New Delhi</span>
+            </div>
+          </div>
+          <div class="journey-divider"></div>
+          <div class="ticket-facts">
+            <div><span class="fact-icon">▣</span><span><small>Coach</small><strong id="coach">B2</strong></span></div>
+            <div><span class="fact-icon">♧</span><span><small>Berth</small><strong id="berth">36 · Lower</strong></span></div>
+            <div><span class="fact-icon">▦</span><span><small>Class</small><strong id="travelClass">3A · AC 3 Tier</strong></span></div>
+            <div><span class="fact-icon">◷</span><span><small>Travel date</small><strong id="dateFact">20 Oct 2026</strong></span></div>
+          </div>
+          <div class="journey-card-footer"><span>ⓘ Sample details for interface preview only. Verify real journey information with official railway sources.</span><button class="outline-button" id="viewTicketBtn">View ticket details <span>→</span></button></div>
+        </section>
+
+        <div class="bottom-grid">
+          <section class="panel assistant-panel">
+            <div class="panel-heading"><div><span class="panel-kicker">YOUR AI COMPANION</span><h2>What can I help with?</h2></div><span class="sparkle-bubble">✦</span></div>
+            <p class="panel-description">Ask a question about your journey, or choose a prompt to get started.</p>
+            <div class="suggestions">
+              <button class="suggestion" data-prompt="Explain my ticket in simple words">✧ Explain my ticket</button>
+              <button class="suggestion" data-prompt="What should I do when I reach the station?">⌁ What to do at station</button>
+              <button class="suggestion" data-prompt="Explain coach and berth in simple words">▤ Explain coach & berth</button>
+            </div>
+            <form id="chatForm" class="chat-form">
+              <textarea id="chatInput" rows="2" placeholder="Ask anything about your journey..." aria-label="Ask a travel question"></textarea>
+              <div class="chat-form-bottom"><span>✦ AI can make mistakes. Verify important details.</span><button type="submit" class="send-button" aria-label="Send question">↑</button></div>
+            </form>
+            <div class="chat-response" id="chatResponse" aria-live="polite" hidden></div>
+          </section>
+
+          <section class="panel checklist-panel">
+            <div class="panel-heading"><div><span class="panel-kicker">READY WHEN YOU ARE</span><h2>Journey checklist</h2></div><span class="check-progress" id="checkProgress">0/4</span></div>
+            <p class="panel-description">Small steps for a smoother trip.</p>
+            <div class="progress-track"><span id="progressBar"></span></div>
+            <div class="checklist" id="checklist">
+              <label class="check-item"><input type="checkbox"><span class="custom-check">✓</span><span><strong>Keep your ticket handy</strong><small>Digital or printed copy</small></span></label>
+              <label class="check-item"><input type="checkbox"><span class="custom-check">✓</span><span><strong>Carry valid photo ID</strong><small>Check the requirements for your trip</small></span></label>
+              <label class="check-item"><input type="checkbox"><span class="custom-check">✓</span><span><strong>Confirm platform details</strong><small>Use official live information</small></span></label>
+              <label class="check-item"><input type="checkbox"><span class="custom-check">✓</span><span><strong>Locate your coach & berth</strong><small>Ask railway staff if unsure</small></span></label>
+            </div>
+            <button class="reset-checklist" id="resetChecklist">Reset checklist ↺</button>
+          </section>
+        </div>
+
+        <footer class="footer"><span>✦ Made for journeys across India</span><span>SafarSaathi · Hackathon prototype</span><button id="aboutBtn">About this demo</button></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
